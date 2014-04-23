@@ -13,14 +13,28 @@ $client->getClient()->setUserAgent('Mozilla/5.0 (X11; U; Linux i686; fr; rv:1.9b
 $crawler = $client->request('GET', 'http://www.espace-julien.com/fr/affiche');
 
 //le programme est contenu dans des tables. Un table par mois.
-$nodes = $crawler->filter('div.affiche > table > tr')->each(function (Crawler $node, $i) {
-    return $node;
+$nodes = $crawler->filter('div.affiche > table > tr')->each(function($node, $i) {
+return $node;
 });
 
 
+//->each(function (Crawler $node, $i) {
+//    return $node;
+//});
+
+
+//foreach ($nodes as $node) {
+
+//print_r($test);
+
+//}
+
 foreach ($nodes as $node) {
 
-$test = $node->html();
-var_dump($test);
+$test = $node->reduce(function($node) {
 
+var_dump($node);
+return $node->filter('h1');
+});
+//print_r($test2->html());
 }
