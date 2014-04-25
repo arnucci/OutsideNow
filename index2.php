@@ -24,7 +24,8 @@ foreach ($nodes as $node) {
 
     $eventArray[$i]['date']  = $node->filter('.TXT-Date')->text();
     $eventArray[$i]['group'] = $node->filter('.TXT-Groupe')->text();
-    $eventArray[$i]['hourprice'] = $node->filter('.TXT-Horaire-Tarif')->text();
+    $eventArray[$i]['hour']  = substr($node->filter('.TXT-Horaire-Tarif')->text(), 1, strpos($node->filter('.TXT-Horaire-Tarif')->text(), '~') -2);
+    $eventArray[$i]['price'] = substr($node->filter('.TXT-Horaire-Tarif')->text(), strpos($node->filter('.TXT-Horaire-Tarif')->text(), '~') + 2);
 
     $i++;
 }
