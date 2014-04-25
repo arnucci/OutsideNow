@@ -18,10 +18,14 @@ $nodes = $crawler->filter('div#MEP-faux2PG-coldroite')->each(function ($node) {
     });
 
 $eventArray = array();
+$i = 0;
 
 foreach ($nodes as $node) {
 
-    $eventArray['date'][] = $node->filter('.TXT-Date')->text();
+    $eventArray[$i]['date']  = $node->filter('.TXT-Date')->text();
+    $eventArray[$i]['group'] = $node->filter('.TXT-Groupe')->text();
+
+    $i++;
 }
 
 var_dump($eventArray);
