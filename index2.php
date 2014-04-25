@@ -14,11 +14,8 @@ $crawler = $client->request('GET', 'http://www.leposteagalene.com/pages/programm
 
 //le programme est contenu dans des tables. Un table par mois.
 $nodes = $crawler->filter('div#MEP-faux2PG-coldroite')->each(function ($node) {
-    return $node->html();
+    return $node;
     });
 
 
-var_dump($nodes);
 
-$count = count($nodes);
-echo $count;
