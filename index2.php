@@ -17,5 +17,12 @@ $nodes = $crawler->filter('div#MEP-faux2PG-coldroite')->each(function ($node) {
     return $node;
     });
 
+$eventArray = array();
 
+foreach ($nodes as $node) {
+
+    $eventArray['date'][] = $node->filter('.TXT-Date')->text();
+}
+
+var_dump($eventArray);
 
