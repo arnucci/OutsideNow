@@ -17,8 +17,22 @@ $nodes = $crawler->filter('#tabListe > tbody > tr')->each(function ($node) {
     return $node;
 });
 
+$eventArray = array();
+$i = 0;
+
 foreach ($nodes as $node) {
 
-var_dump($node->text());
+    try {
 
+        $eventArray[$i]['date']  = $node->filter('.date')->html();
+
+        $i++;
+
+    } catch (Exception $e) {
+
+        continue;
+    }
 }
+
+var_dump($eventArray);
+
