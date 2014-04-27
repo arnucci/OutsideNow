@@ -24,7 +24,7 @@ foreach ($nodes as $node) {
 
     try {
 
-        $eventArray[$i]['date']  = $node->filter('.date')->html();
+        $eventArray[$i]['date']  = $node->filter('.date')->text();
 
         $i++;
 
