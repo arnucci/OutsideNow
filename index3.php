@@ -27,6 +27,7 @@ foreach ($nodes as $node) {
         $eventArray[$i]['date']  = $node->filter('.date')->text();
         $eventArray[$i]['group'] = trim($node->filter('.titre')->text());
         $eventArray[$i]['heure'] = $node->filter('.heure')->text();
+        $eventArray[$i]['price'] = trim($node->filter('.tarifs')->text());
 
         $i++;
 
