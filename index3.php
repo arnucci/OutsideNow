@@ -28,6 +28,7 @@ foreach ($nodes as $node) {
         $eventArray[$i]['group'] = trim($node->filter('.titre')->text());
         $eventArray[$i]['heure'] = $node->filter('.heure')->text();
         $eventArray[$i]['price'] = trim($node->filter('.tarifs')->text());
+        $eventArray[$i]['link']  = 'http://www.silo-marseille.fr'.$node->filter('.titre > a')->attr('href');
 
         $i++;
 
