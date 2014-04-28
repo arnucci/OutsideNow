@@ -14,3 +14,4 @@ http://www.citemusique-marseille.com/index.php/page/dspConcerts
 http://www.gmem.org/index.php?option=com_content&view=article&id=14&Itemid=32
 http://www.lamerveilleuse.org/spip.php?rubrique7
 http://www.lesvoiesduchant.org/
+http://equitablecafe.org/index.php
