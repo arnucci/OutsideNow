@@ -1,7 +1,6 @@
 <?php
 //pour crawler le site du silo
-
-require_once 'goutte.phar';
+require_once 'vendor/autoload.php';
 
 use Goutte\Client;
 use Symfony\Component\DomCrawler\Crawler;
