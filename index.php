@@ -9,20 +9,17 @@ $client = new Client();
 
 $client->getClient()->setUserAgent('Mozilla/5.0 (X11; U; Linux i686; fr; rv:1.9b5) Gecko/2008041514 Firefox/3.0b5');
 
+switch ($argv[1]) {
 
-$crawler = $client->request('GET', 'http://www.espace-julien.com/fr/affiche');
+ case 'index.php':
+     require_once 'spiders/index.php';
+     break;
 
-//le programme est contenu dans des tables. Un table par mois.
-$nodes = $crawler->filter('div.affiche > table > tr')->each(function($node, $i) {
-        return $node;
-    });
+ case 'index2.php':
+     require_once 'spiders/index2.php';
+     break;
 
-foreach ($nodes as $node) {
-
-    $test = $node->reduce(function($node) {
-
-            var_dump($node);
-            return $node->filter('h1');
-        });
-    
-}
+ case 'index3.php':
+     require_once 'spiders/index3.php';
+     break;
+ }
