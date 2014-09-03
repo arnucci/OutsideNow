@@ -16,14 +16,25 @@ $nodes = $crawler->filter('div#MEP-faux2PG-coldroite')->each(function ($node) {
      try {     
          $eventArray[$i]['group'] = $node->filter('.TXT-Groupe')->text();
 
-     }         catch (Exception $e) {
+     } catch (Exception $e) {
 
-             $eventArray[$i]['group'] ='coucou';
-         }
+         $eventArray[$i]['group'] ='L\'info n\'est pas disponible';
+     }
 
-     
-     $eventArray[$i]['hour']  = substr($node->filter('.TXT-Horaire-Tarif')->text(), 1, strpos($node->filter('.TXT-Horaire-Tarif')->text(), '~') -2);
-     $eventArray[$i]['price'] = substr($node->filter('.TXT-Horaire-Tarif')->text(), strpos($node->filter('.TXT-Horaire-Tarif')->text(), '~') + 2);
+     try {     
+         $eventArray[$i]['hour']  = substr($node->filter('.TXT-Horaire-Tarif')->text(), 1, strpos($node->filter('.TXT-Horaire-Tarif')->text(), '~') -2);
+     } catch (Exception $e) {
+
+         $eventArray[$i]['hour'] ='L\'info n\'est pas disponible';
+     }
+
+     try {     
+         $eventArray[$i]['price'] = substr($node->filter('.TXT-Horaire-Tarif')->text(), strpos($node->filter('.TXT-Horaire-Tarif')->text(), '~') + 2);
+     } catch (Exception $e) {
+
+         $eventArray[$i]['price'] ='L\'info n\'est pas disponible';
+     }
+
      $eventArray[$i]['link']  = 'http://www.leposteagalene.com/pages/programme.html';
 
      $i++;
