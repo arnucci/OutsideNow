@@ -16,10 +16,10 @@ switch ($argv[1]) {
      break;
 
  case 'index2.php':
-     require_once 'spiders/index2.php';
+     require_once 'spiders/marseille-poste_a_galene.php';
      break;
 
  case 'index3.php':
-     require_once 'spiders/index3.php';
+     require_once 'spiders/marseille-silo.php';
      break;
  }
