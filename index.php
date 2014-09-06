@@ -11,15 +11,21 @@ $client->getClient()->setUserAgent('Mozilla/5.0 (X11; U; Linux i686; fr; rv:1.9b
 
 switch ($argv[1]) {
 
- case 'index.php':
+ case 'marseille':
+     require_once 'spiders/marseille-espace_julien.php';
+     require_once 'spiders/marseille-poste_a_galene.php';
+     require_once 'spiders/marseille-silo.php';
+     break;
+
+ case 'espace_julien':
      require_once 'spiders/marseille-espace_julien.php';
      break;
 
- case 'index2.php':
+ case 'poste_a_galene':
      require_once 'spiders/marseille-poste_a_galene.php';
      break;
 
- case 'index3.php':
+ case 'silo':
      require_once 'spiders/marseille-silo.php';
      break;
  }
