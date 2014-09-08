@@ -29,3 +29,20 @@ switch ($argv[1]) {
      require_once 'spiders/marseille-silo.php';
      break;
  }
+
+
+use Symfony\Component\Finder\Finder;
+
+$finder = new Finder();
+$finder->files()->in(__DIR__);
+
+foreach ($finder as $file) {
+    // Print the absolute path
+    print $file->getRealpath()."\n";
+
+    // Print the relative path to the file, omitting the filename
+    print $file->getRelativePath()."\n";
+
+    // Print the relative path to the file
+    print $file->getRelativePathname()."\n";
+}
