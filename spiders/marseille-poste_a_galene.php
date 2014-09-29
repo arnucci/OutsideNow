@@ -18,7 +18,7 @@ $nodes = $crawler->filter('div#MEP-faux2PG-coldroite')->each(function ($node) {
 
      } catch (Exception $e) {
 
-         $eventArray[$i]['group'] ='L\'info n\'est pas disponible';
+         $eventArray[$i]['group'] = $node->filter('.TXT-GroupeMAJ')->text();
      }
 
      try {     
