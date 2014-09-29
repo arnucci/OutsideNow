@@ -29,4 +29,4 @@ foreach ($nodes as $node) {
 }
 
 
-print_r($eventArray);
+return $eventArray;

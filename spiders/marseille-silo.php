@@ -26,5 +26,5 @@ foreach ($nodes as $node) {
     }
 }
 
-var_dump($eventArray);
+return $eventArray;
 

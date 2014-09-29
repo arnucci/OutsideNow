@@ -40,5 +40,5 @@ $nodes = $crawler->filter('div#MEP-faux2PG-coldroite')->each(function ($node) {
      $i++;
  }
 
- var_dump($eventArray);
+return $eventArray;
 

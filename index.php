@@ -12,7 +12,11 @@ $client->getClient()->setUserAgent('Mozilla/5.0 (X11; U; Linux i686; fr; rv:1.9b
 $finder = new Finder();
 $finder->files()->name('*'.$argv[1].'*')->in('spiders/');
 
+$eventArray = array();
+
 foreach ($finder as $file) {
 
     require 'spiders/'.$file->getRelativePathname();
 }
+
+var_dump($eventArray);
