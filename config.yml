@@ -1,0 +1,11 @@
+spider.silo:
+    url  : 'http://www.silo-marseille.fr'
+    tags : ['marseille', 'concert', 'spectacle']
+
+spider.espace_julien:
+    url  : 'http://www.espace-julien.com/fr/affiche'
+    tags : ['marseille', 'concert', 'spectacle']
+
+spider.poste_a_galene:
+    url  : 'http://www.leposteagalene.com/pages/programme.html'
+    tags : ['marseille', 'concert']
