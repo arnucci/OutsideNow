@@ -1,7 +1,0 @@
-{
-    "require": {
-        "fabpot/goutte": "v1.0.6",
-        "symfony/console": "2.6.*@dev",
-	"symfony/yaml": "2.6.*@dev"
-    }
-}
