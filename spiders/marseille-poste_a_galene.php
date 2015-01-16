@@ -29,7 +29,7 @@ $nodes = $crawler->filter('div#MEP-faux2PG-coldroite')->each(function ($node) {
      }
 
      try {     
-         $eventArray[$i]['price'] = substr($node->filter('.TXT-Horaire-Tarif')->text(), strpos($node->filter('.TXT-Horaire-Tarif')->text(), '~') + 2);
+         $eventArray[$i]['price'] = trim(substr($node->filter('.TXT-Horaire-Tarif')->text(), strpos($node->filter('.TXT-Horaire-Tarif')->text(), '~') + 1));
      } catch (Exception $e) {
 
          $eventArray[$i]['price'] ='L\'info n\'est pas disponible';
