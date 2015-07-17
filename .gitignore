@@ -12,3 +12,5 @@
 /composer.phar
 *~
 .idea/
+app/data/*
+!app/data/.gitkeep
