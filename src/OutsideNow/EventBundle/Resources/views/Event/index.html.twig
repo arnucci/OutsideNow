@@ -23,7 +23,7 @@
                 <td>{{ entity.artist }}</td>
                 <td>{{ entity.name }}</td>
                 <td>{% if entity.date %}{{ entity.date|date('Y-m-d H:i:s') }}{% endif %}</td>
-                <td>{{ entity.hour }}</td>
+                <td>{{ entity.hour|date('H:i:s') }}</td>
                 <td>{{ entity.price }}</td>
                 <td>{{ entity.link }}</td>
                 <td>
