@@ -1,6 +1,6 @@
 <?php
 
-namespace OutsideNow\EventBundle\Entity;
+namespace OutsideNow\EventBundle\Repository;
 
 use Doctrine\ORM\EntityRepository;
 
