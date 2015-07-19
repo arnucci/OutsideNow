@@ -24,10 +24,7 @@ class CrawlCommand extends ContainerAwareCommand
     {
         $client = new Client();
 
-//        $client->getClient()->setUserAgent('Mozilla/5.0 (X11; U; Linux i686; fr; rv:1.9b5) Gecko/2008041514 Firefox/3.0b5');
-
         $finder = new Finder();
-//        $finder->files()->name('*'.$argv[1].'*')->in('spiders/');
         $finder->files()->in('src/OutsideNow/EventBundle/Spiders/');
 
         $eventArray = array();
