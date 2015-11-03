@@ -8,7 +8,7 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
 use OutsideNow\EventBundle\Entity\Event;
-use OutsideNow\EventBundle\Form\EventType;
+use OutsideNow\EventBundle\Form\SearchType;
 
 /**
  * Event controller.
@@ -31,8 +31,14 @@ class EventController extends Controller
 
         $entities = $em->getRepository('OutsideNowEventBundle:Event')->findAll();
 
+        $searchForm = $this->createForm(new SearchType(), null, array(
+            'action' => $this->generateUrl('event'),
+            'method' => 'GET',
+        ));
+
         return array(
             'entities' => $entities,
+            'search_form' => $searchForm->createView(),
         );
     }
 
