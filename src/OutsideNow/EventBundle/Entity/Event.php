@@ -63,6 +63,20 @@ class Event
      */
     private $link;
 
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="city", type="string", length=255)
+     */
+    private $city;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="location", type="string", length=255)
+     */
+    private $location;
+
 
     /**
      * Get id
@@ -210,5 +224,74 @@ class Event
     public function getLink()
     {
         return $this->link;
+    }
+
+    /**
+     * Set city
+     *
+     * @param string $city
+     * @return Event
+     */
+    public function setCity($city)
+    {
+        $this->city = $city;
+
+        return $this;
+    }
+
+    /**
+     * Get city
+     *
+     * @return string 
+     */
+    public function getCity()
+    {
+        return $this->city;
+    }
+
+    /**
+     * Set place
+     *
+     * @param string $place
+     * @return Event
+     */
+    public function setPlace($place)
+    {
+        $this->place = $place;
+
+        return $this;
+    }
+
+    /**
+     * Get place
+     *
+     * @return string 
+     */
+    public function getPlace()
+    {
+        return $this->place;
+    }
+
+    /**
+     * Set location
+     *
+     * @param string $location
+     * @return Event
+     */
+    public function setLocation($location)
+    {
+        $this->location = $location;
+
+        return $this;
+    }
+
+    /**
+     * Get location
+     *
+     * @return string 
+     */
+    public function getLocation()
+    {
+        return $this->location;
     }
 }
