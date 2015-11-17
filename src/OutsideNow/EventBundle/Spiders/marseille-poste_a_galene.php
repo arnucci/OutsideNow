@@ -35,7 +35,9 @@ $nodes = $crawler->filter('div#MEP-faux2PG-coldroite')->each(function ($node) {
          $eventArray[$i]['price'] ='L\'info n\'est pas disponible';
      }
 
-     $eventArray[$i]['link']  = 'http://www.leposteagalene.com/pages/programme.html';
+     $eventArray[$i]['link']      = 'http://www.leposteagalene.com/pages/programme.html';
+     $eventArray[$i]['city']      = 'Marseille';
+     $eventArray[$i]['location']  = 'Le Poste à Galène';
 
      $i++;
  }

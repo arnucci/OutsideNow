@@ -12,11 +12,13 @@ foreach ($nodes as $node) {
 
     try {
 
-        $eventArray[$i]['date']  = $node->filter('.date')->text();
-        $eventArray[$i]['group'] = trim($node->filter('.titre')->text());
-        $eventArray[$i]['heure'] = $node->filter('.heure')->text();
-        $eventArray[$i]['price'] = trim($node->filter('.tarifs')->text());
-        $eventArray[$i]['link']  = 'http://www.silo-marseille.fr'.$node->filter('.titre > a')->attr('href');
+        $eventArray[$i]['date']     = $node->filter('.date')->text();
+        $eventArray[$i]['group']    = trim($node->filter('.titre')->text());
+        $eventArray[$i]['heure']    = $node->filter('.heure')->text();
+        $eventArray[$i]['price']    = trim($node->filter('.tarifs')->text());
+        $eventArray[$i]['link']     = 'http://www.silo-marseille.fr'.$node->filter('.titre > a')->attr('href');
+        $eventArray[$i]['city']     = 'Marseille';
+        $eventArray[$i]['location'] = 'Le Silo';
 
         $i++;
 
