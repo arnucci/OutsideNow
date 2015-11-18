@@ -26,13 +26,6 @@
                 <td>{{ entity.hour|date('H:i:s') }}</td>
                 <td>{{ entity.price }}</td>
                 <td>{{ entity.link }}</td>
-                <td>
-                <ul>
-                    <li>
-                        <a href="{{ path('event_show', { 'id': entity.id }) }}">show</a>
-                    </li>
-                </ul>
-                </td>
             </tr>
         {% endfor %}
         </tbody>
