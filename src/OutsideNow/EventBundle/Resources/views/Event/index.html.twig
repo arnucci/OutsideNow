@@ -26,7 +26,7 @@
                 <td>{% if entity.date %}{{ entity.date|date('Y-m-d H:i:s') }}{% endif %}</td>
                 <td>{{ entity.hour|date('H:i:s') }}</td>
                 <td>{{ entity.price }}</td>
-                <td>{{ entity.link }}</td>
+                <td><a href="{{ entity.link }}">{{ entity.link }}</a></td>
                 <td>{{ entity.location }}</td>
                 <td>{{ entity.city }}</td>
             </tr>
