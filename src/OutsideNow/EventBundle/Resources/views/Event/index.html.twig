@@ -13,6 +13,8 @@
                 <th>Hour</th>
                 <th>Price</th>
                 <th>Link</th>
+                <th>Location</th>
+                <th>City</th>
             </tr>
         </thead>
         <tbody>
@@ -25,6 +27,8 @@
                 <td>{{ entity.hour|date('H:i:s') }}</td>
                 <td>{{ entity.price }}</td>
                 <td>{{ entity.link }}</td>
+                <td>{{ entity.location }}</td>
+                <td>{{ entity.city }}</td>
             </tr>
         {% endfor %}
         </tbody>
